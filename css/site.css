@@ -7,6 +7,10 @@
 
 /* Write your styles below this line. */
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Write your styles above this line. */
 
 @tailwind utilities;

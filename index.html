@@ -16,6 +16,7 @@
 {"url":"https://torahandtech.dev","headline":"Torah && Tech","name":"Torah && Tech","description":"Torah && Tech is a new book that brings you a discussion at the intersection of Torah and Technology. Get the book today and subscribe to the weekly newsletter!","@type":"WebSite","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" />
+<link rel="stylesheet" href="css/site.css" />
 <link type="application/atom+xml" rel="alternate" href="https://torahandtech.dev/feed.xml" title="Torah && Tech" /></head>
 <body class="text-gray-700 bg-white" style="font-family: 'Source Sans Pro', sans-serif">
   <nav>
@@ -34,8 +35,8 @@
       <div class="hidden lg:block">
         <ul class="inline-flex">
           <li><a class="px-4 font-bold" href="/">Home</a></li>
-          <li><a class="px-4 hover:text-gray-800" href="#">About The Book</a></li>
-          <li><a class="px-4 hover:text-gray-800" href="#">Subscribe To The Newsletter</a></li>
+          <li><a class="px-4 hover:text-gray-800" href="#about">About The Book</a></li>
+          <li><a class="px-4 hover:text-gray-800" href="#subscribe">Subscribe To The Newsletter</a></li>
         </ul>
       </div>
     </div>
@@ -64,7 +65,7 @@
   </div>
 
   <section class="container mx-auto px-6 p-10">
-    <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-8" id="about">
       About The Book
     </h2>
     <div class="flex items-center flex-wrap mb-20">
@@ -98,7 +99,7 @@
     </div>
   </section>
 
-  <section style="background-color: #667eea">
+  <section style="background-color: #667eea" id="subscribe">
     <div class="container mx-auto px-6 text-center py-20">
       <h2 class="mb-6 text-4xl font-bold text-center text-white">
         Subscribe To The Newsletter
@@ -106,10 +107,12 @@
       <h3 class="my-4 text-2xl text-white">
         Join the ongoing weekly conversation by subscribing to the Torah && Tech newsletter!
       </h3>
-      <button
-        class="bg-white font-bold rounded-full mt-6 py-4 px-8 shadow-lg uppercase tracking-wider">
-        Subscribe
-      </button>
+      <a href="https://mailchi.mp/f78e9b44f28d/torahandtech" target="_blank">
+        <button
+          class="bg-white font-bold rounded-full mt-6 py-4 px-8 shadow-lg uppercase tracking-wider">
+          Subscribe
+        </button>
+      </a>
     </div>
   </section>
 
@@ -143,7 +146,7 @@
           <h5 class="uppercase mb-6 font-bold">Social</h5>
           <ul class="mb-4">
             <li class="mt-2">
-              <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Twitter</a>
+              <a href="https://twitter.com/tech_torah" class="hover:underline text-gray-600 hover:text-orange-500">Twitter</a>
             </li>
           </ul>
         </div>
