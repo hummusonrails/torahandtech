@@ -31,18 +31,89 @@ newsletter_archive_url: https://us19.campaign-archive.com/home/?u=30eae9068398a2
 <script type="application/ld+json">
 {"url":"{{ site.url }}","headline":"{{ site.title }}","name":"{{ site.title }}","description":"{{ site.description }}","@type":"WebSite","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.9/dist/tailwind.min.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'midnight': '#0a0a0f',
+        'deep': '#12121a',
+        'elevated': '#1a1a2e',
+        'gold': '#c9a84c',
+        'gold-light': '#dbb960',
+        'gold-dim': 'rgba(201, 168, 76, 0.15)',
+        'warm-white': '#e8e6e1',
+        'warm-gray': '#9ca3af',
+      },
+      fontFamily: {
+        'serif': ['Cormorant Garamond', 'Georgia', 'serif'],
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'mono': ['JetBrains Mono', 'monospace'],
+      },
+    }
+  }
+}
+</script>
 <link rel="stylesheet" href="css/site.css" />
-<link type="application/atom+xml" rel="alternate" href="https://torahandtech.dev/feed.xml" title="{{ site.title }}" /></head>
-<body class="text-gray-700 bg-white" style="font-family: 'Source Sans Pro', sans-serif">
-  <nav>
-    <div class="container mx-auto px-6 py-2 flex justify-between items-center">
-      <a class="font-bold text-2xl lg:text-4xl" href="#">
-        {{ site.title }}
+<link type="application/atom+xml" rel="alternate" href="https://torahandtech.dev/feed.xml" title="{{ site.title }}" />
+<style>
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+  }
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 30px rgba(201, 168, 76, 0.2), 0 0 60px rgba(201, 168, 76, 0.1); }
+    50% { box-shadow: 0 0 40px rgba(201, 168, 76, 0.3), 0 0 80px rgba(201, 168, 76, 0.15); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
+  .animate-fade-in-up-delay-1 { animation: fadeInUp 0.8s ease-out 0.15s forwards; opacity: 0; }
+  .animate-fade-in-up-delay-2 { animation: fadeInUp 0.8s ease-out 0.3s forwards; opacity: 0; }
+  .animate-fade-in-up-delay-3 { animation: fadeInUp 0.8s ease-out 0.45s forwards; opacity: 0; }
+  .animate-float { animation: float 6s ease-in-out infinite; }
+  .animate-glow { animation: glow 4s ease-in-out infinite; }
+  .gold-shimmer {
+    background: linear-gradient(90deg, #c9a84c 0%, #f0d78c 50%, #c9a84c 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+  }
+  .section-reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .section-reveal.visible { opacity: 1; transform: translateY(0); }
+  .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(201, 168, 76, 0.15); }
+  .gold-border-glow { border: 1px solid rgba(201, 168, 76, 0.2); transition: border-color 0.3s ease; }
+  .gold-border-glow:hover { border-color: rgba(201, 168, 76, 0.5); }
+  .nav-link { position: relative; }
+  .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1px; background: #c9a84c; transition: width 0.3s ease; }
+  .nav-link:hover::after { width: 100%; }
+  input::placeholder { color: #6b7280; }
+</style>
+</head>
+<body class="bg-midnight text-warm-white font-sans antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-midnight/80 backdrop-blur-md border-b border-gold-dim">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a class="font-serif text-2xl lg:text-3xl font-bold tracking-wide" href="#">
+        <span class="text-warm-white">Torah </span><span class="font-mono text-gold">&amp;&amp;</span><span class="text-warm-white"> Tech</span>
       </a>
       <div class="block lg:hidden">
-        <button class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none">
+        <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="flex items-center px-3 py-2 border rounded text-warm-gray border-gold-dim hover:text-gold hover:border-gold appearance-none focus:outline-none transition-colors duration-300">
           <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <title>Menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -50,178 +121,243 @@ newsletter_archive_url: https://us19.campaign-archive.com/home/?u=30eae9068398a2
         </button>
       </div>
       <div class="hidden lg:block">
-        <ul class="inline-flex">
-          <li><a class="px-4 font-bold" href="/">Home</a></li>
-          <li><a class="px-4 hover:text-gray-800" href="#about-the-book">About The Book</a></li>
-          <li><a class="px-4 hover:text-gray-800" href="#subscribe-to-the-newsletter">Subscribe To The Newsletter</a></li>
-          <li><a class="px-4 hover:text-gray-800" href="{{page.newsletter_archive_url}}" target="_blank">Archive</a></li>
-          <li><a class="px-4 hover:text-gray-800" href="https://discord.gg/HeUp2N2RxC" target="_blank">Join The Discord Server</a></li>
+        <ul class="inline-flex items-center space-x-8">
+          <li><a class="nav-link text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="/">Home</a></li>
+          <li><a class="nav-link text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="#about-the-book">About The Book</a></li>
+          <li><a class="nav-link text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="#subscribe-to-the-newsletter">Subscribe</a></li>
+          <li><a class="nav-link text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="{{page.newsletter_archive_url}}" target="_blank">Archive</a></li>
+          <li><a class="nav-link text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="https://discord.gg/HeUp2N2RxC" target="_blank">Discord</a></li>
         </ul>
       </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-gold-dim">
+      <ul class="px-6 py-4 space-y-4">
+        <li><a class="block text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="/">Home</a></li>
+        <li><a class="block text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="#about-the-book">About The Book</a></li>
+        <li><a class="block text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="#subscribe-to-the-newsletter">Subscribe</a></li>
+        <li><a class="block text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="{{page.newsletter_archive_url}}" target="_blank">Archive</a></li>
+        <li><a class="block text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="https://discord.gg/HeUp2N2RxC" target="_blank">Discord</a></li>
+      </ul>
     </div>
   </nav>
 
 
-  <div class="py-20" style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%)">
-    <div class="container flex mb-4 mx-auto px-6">
-      <div class="w-1/2">
-        <h2 class="text-4xl font-bold mb-2 text-white">
-          {{ site.title }}
-        </h2>
-        <h3 class="text-2xl mb-8 text-gray-200">
-          Discussions at the Intersection of Torah and Technology
-        </h3>
-        <a href="{{ page.amazon_url }}" target="_new">
-          <button class="bg-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider">
-            Get Your Copy
-          </button>
-        </a>
-        <p class="mt-3 text-base text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl xl:mx-0">
-          To order <a href="{{ page.bookdepository_url }}" class="border-b-4 border-white-400" target="_new">outside the US</a>
-        </p>
-        <p class="mt-3 text-base text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl xl:mx-0">
-          or <a href="#table-of-contents" class="border-b-4 border-white-400">view the Table of Contents</a>
-        </p>
-        <p class="mt-3 text-base text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl xl:mx-0">
-          For bulk orders email us at <a href="mailto:{{ site.email }}" class="border-b-4 border-white-400">{{ site.email }}</a>
-        </p>
-      </div>
-      <div class="w-1/2">
-        <div class="md:w-1/2">
-          <img src="assets/images/book_3d.png" alt="Book 3D Image" />
+  <!-- Hero Section -->
+  <div class="relative min-h-screen flex items-center overflow-hidden" style="background: radial-gradient(ellipse at 30% 50%, #1a1a2e 0%, #0a0a0f 70%)">
+    <!-- Subtle decorative elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-gold/3 rounded-full blur-3xl"></div>
+    </div>
+    <div class="container mx-auto px-6 relative z-10 pt-24">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+        <div class="w-full md:w-1/2 text-center md:text-left">
+          <h1 class="font-serif text-5xl md:text-7xl font-bold mb-4 animate-fade-in-up leading-tight">
+            <span class="text-warm-white">Torah </span><span class="gold-shimmer font-mono">&amp;&amp;</span><span class="text-warm-white"> Tech</span>
+          </h1>
+          <h2 class="font-serif text-xl md:text-2xl mb-10 text-warm-gray font-light italic animate-fade-in-up-delay-1">
+            Discussions at the Intersection of Torah and Technology
+          </h2>
+          <div class="animate-fade-in-up-delay-2">
+            <a href="{{ page.amazon_url }}" target="_new">
+              <button class="bg-gold hover:bg-gold-light text-midnight font-semibold rounded-full py-4 px-10 uppercase tracking-widest text-sm transition-all duration-300 hover:shadow-lg hover:shadow-gold/20">
+                Get Your Copy
+              </button>
+            </a>
+          </div>
+          <div class="mt-8 space-y-3 animate-fade-in-up-delay-3">
+            <p class="text-sm text-warm-gray">
+              To order <a href="{{ page.bookdepository_url }}" class="text-gold hover:text-gold-light border-b border-gold/30 hover:border-gold transition-colors duration-300" target="_new">outside the US</a>
+            </p>
+            <p class="text-sm text-warm-gray">
+              or <a href="#table-of-contents" class="text-gold hover:text-gold-light border-b border-gold/30 hover:border-gold transition-colors duration-300">view the Table of Contents</a>
+            </p>
+            <p class="text-sm text-warm-gray">
+              For bulk orders email us at <a href="mailto:{{ site.email }}" class="text-gold hover:text-gold-light border-b border-gold/30 hover:border-gold transition-colors duration-300">{{ site.email }}</a>
+            </p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 flex justify-center">
+          <div class="animate-float">
+            <img src="assets/images/book_3d.png" alt="Book 3D Image" class="max-w-sm w-full drop-shadow-2xl animate-glow rounded-lg" style="filter: drop-shadow(0 20px 40px rgba(201, 168, 76, 0.2));" />
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <section class="container mx-auto px-6 p-10">
-    <h2 id="about-the-book" class="text-4xl font-bold text-center text-gray-800 mb-8">
-      About The Book
-    </h2>
-    <div class="flex items-center flex-wrap mb-20">
-      <div class="w-full md:w-1/2">
-        <h4 class="text-3xl text-gray-800 font-bold mb-3">Torah to Tech</h4>
-        <p class="text-gray-600 mb-8">What do Jewish ethics and wisdom have to say on topics such as artificial intelligence, code ownership, object oriented design, and more? Torah && Tech brings more than three millennia of insights and wisdom to bear on technology.</p>
+
+  <!-- About The Book -->
+  <section class="bg-deep py-24">
+    <div class="container mx-auto px-6">
+      <h2 id="about-the-book" class="font-serif text-4xl md:text-5xl font-bold text-center text-warm-white mb-20 section-reveal">
+        About The Book
+      </h2>
+
+      <!-- Torah to Tech -->
+      <div class="flex flex-col md:flex-row items-center gap-12 mb-24 section-reveal">
+        <div class="w-full md:w-1/2">
+          <div class="p-8 rounded-2xl gold-border-glow bg-elevated/50 hover-lift">
+            <h4 class="font-serif text-3xl text-gold font-bold mb-4">Torah to Tech</h4>
+            <p class="text-warm-gray leading-relaxed text-lg">What do Jewish ethics and wisdom have to say on topics such as artificial intelligence, code ownership, object oriented design, and more? Torah && Tech brings more than three millennia of insights and wisdom to bear on technology.</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 flex justify-center">
+          <img src="assets/images/book_3d.png" alt="Book 3D Image" class="max-w-md w-full rounded-lg" style="filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));" />
+        </div>
       </div>
-      <div class="w-full md:w-1/2">
-        <img src="assets/images/book_3d.png" alt="Book 3D Image" />
+
+      <!-- Tech to Torah -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-24 section-reveal">
+        <div class="w-full md:w-1/2">
+          <div class="p-8 rounded-2xl gold-border-glow bg-elevated/50 hover-lift">
+            <h4 class="font-serif text-3xl text-gold font-bold mb-4">Tech to Torah</h4>
+            <p class="text-warm-gray leading-relaxed text-lg">What do the innovations in technology mean for our inter-personal lives at work, with our family and with our communities? Does social media change the way we ought to interact with others? Am I my avatar's keeper? Torah && Tech brings tech into the conversation with Torah.</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 flex justify-center">
+          <img class="rounded-lg max-w-md w-full" src="assets/images/torah_image.jpg" alt="Torah" style="filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));" />
+        </div>
       </div>
-    </div>
-  
-    <div class="flex items-center flex-wrap mb-20">
-      <div class="rounded-full w-full md:w-1/2">
-        <img class="rounded-lg" src="assets/images/torah_image.jpg" alt="Torah" />
-      </div>
-      <div class="w-full md:w-1/2 pl-10">
-        <h4 class="text-3xl text-gray-800 font-bold mb-3">Tech to Torah</h4>
-        <p class="text-gray-600 mb-8">What do the innovations in technology mean for our inter-personal lives at work, with our family and with our communities? Does social media change the way we ought to interact with others? Am I my avatar's keeper? Torah && Tech brings tech into the conversation with Torah.</p>
-      </div>
-    </div>
-  
-    <div class="flex items-center flex-wrap mb-20">
-      <div class="w-full md:w-1/2">
-        <h4 class="text-3xl text-gray-800 font-bold mb-3">It's a Conversation</h4>
-        <p class="text-gray-600 mb-8">Torah && Tech does not aim to talk <i>to</i> you, but rather talk <i>with</i> you. It is the beginning of a conversation. The book grew out of a weekly newsletter running now for more than a year. It is a dialectic between the text and the people, not a monologue.</p>
-      </div>
-      <div class="rounded-full w-full md:w-1/2">
-        <img src="assets/images/code.jpg" alt="Code" />
+
+      <!-- It's a Conversation -->
+      <div class="flex flex-col md:flex-row items-center gap-12 mb-8 section-reveal">
+        <div class="w-full md:w-1/2">
+          <div class="p-8 rounded-2xl gold-border-glow bg-elevated/50 hover-lift">
+            <h4 class="font-serif text-3xl text-gold font-bold mb-4">It's a Conversation</h4>
+            <p class="text-warm-gray leading-relaxed text-lg">Torah && Tech does not aim to talk <i>to</i> you, but rather talk <i>with</i> you. It is the beginning of a conversation. The book grew out of a weekly newsletter running now for more than a year. It is a dialectic between the text and the people, not a monologue.</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 flex justify-center">
+          <img src="assets/images/code.jpg" alt="Code" class="rounded-lg max-w-md w-full" style="filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));" />
+        </div>
       </div>
     </div>
   </section>
 
-  <section style="background-color: #667eea" id="subscribe" class="flex items-center justify-center py-20">
-    <div class="flex items-center justify-center">
-      <div class="w-full md:w-1/1">
-        <h2 id="subscribe-to-the-newsletter" class="mb-6 text-4xl font-bold text-center text-white">
+
+  <!-- Newsletter Subscribe -->
+  <section class="relative py-24 overflow-hidden" style="background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1a 100%)" id="subscribe">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+    </div>
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="max-w-3xl mx-auto text-center section-reveal">
+        <h2 id="subscribe-to-the-newsletter" class="mb-6 font-serif text-4xl md:text-5xl font-bold text-warm-white">
           Subscribe To The Newsletter
         </h2>
-        <h3 class="my-4 text-2xl text-white">
+        <h3 class="my-6 text-xl text-warm-gray font-light">
           Join the ongoing weekly conversation by subscribing to the Torah && Tech newsletter!
         </h3>
-      </div>
-      <form class="w-full max-w-sm" action="https://twitter.us19.list-manage.com/subscribe/post?u=30eae9068398a251f4e180849&amp;id=98ea64e095" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
-        <div class="flex items-center border-b border-b-2 border-white-500 py-2">
-          <input name="EMAIL" id="mce-EMAIL" class="appearance-none bg-transparent border-none w-full text-black-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="email" placeholder="example@sample.com" required>
-          <input type="submit" value="Subscribe" id="mc-embedded-subscribe" class="shadow-lg bg-white hover:bg-transparent text-transparent-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-white rounded-full">
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <section class="container mx-auto px-6 p-10">
-    <h2 id="table-of-contents" class="text-4xl font-bold text-center text-gray-800 mb-8">
-      Table of Contents
-    </h2>
-    <div class="nav flex justify-between items-center">
-      <div class="w-1/4 ml-6 ">
-        <a href="assets/images/toc/toc_pg_1.png" target="_new">
-          <img class="rounded mb-2 m-2 h-64 w-64  " src="assets/images/toc/toc_pg_1.png">
-        </a>
-      </div>
-      <div class="w-1/4">
-        <a href="assets/images/toc/toc_pg_2.png" target="_new">
-          <img class="rounded mb-2 m-2 h-64 w-64 " src="assets/images/toc/toc_pg_2.png">
-        </a>
-      </div>
-      <div class="w-1/4">
-        <a href="assets/images/toc/toc_pg_3.png" target="_new">
-          <img class="rounded mb-2 m-2 h-64 w-64 " src="assets/images/toc/toc_pg_3.png">
-        </a>
-      </div>
-      <div class="w-1/4 -mr-3">
-        <a href="assets/images/toc/toc_pg_4.png" target="_new">
-          <img class="rounded mb-2 m-2 h-64 w-64" src="assets/images/toc/toc_pg_4.png">
-        </a>
+        <form class="mt-10 max-w-lg mx-auto" action="https://twitter.us19.list-manage.com/subscribe/post?u=30eae9068398a251f4e180849&amp;id=98ea64e095" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+          <div class="flex items-center border-b border-gold/30 py-2 transition-colors duration-300 focus-within:border-gold">
+            <input name="EMAIL" id="mce-EMAIL" class="appearance-none bg-transparent border-none w-full text-warm-white mr-3 py-2 px-2 leading-tight focus:outline-none text-lg" type="email" placeholder="example@sample.com" required>
+            <input type="submit" value="Subscribe" id="mc-embedded-subscribe" class="bg-gold hover:bg-gold-light text-midnight font-semibold py-2 px-6 border-none rounded-full cursor-pointer transition-all duration-300 hover:shadow-lg hover:shadow-gold/20 text-sm uppercase tracking-wider">
+          </div>
+        </form>
       </div>
     </div>
   </section>
 
 
-  <footer class="bg-gray-100">
-    <div class="container mx-auto px-6 pt-10 pb-6">
-      <div class="flex flex-wrap">
+  <!-- Table of Contents -->
+  <section class="bg-deep py-24">
+    <div class="container mx-auto px-6 section-reveal">
+      <h2 id="table-of-contents" class="font-serif text-4xl md:text-5xl font-bold text-center text-warm-white mb-16">
+        Table of Contents
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <a href="assets/images/toc/toc_pg_1.png" target="_new" class="group">
+          <div class="rounded-xl overflow-hidden gold-border-glow hover-lift bg-elevated/30 p-2">
+            <img class="rounded-lg w-full" src="assets/images/toc/toc_pg_1.png" alt="Table of Contents Page 1">
+          </div>
+        </a>
+        <a href="assets/images/toc/toc_pg_2.png" target="_new" class="group">
+          <div class="rounded-xl overflow-hidden gold-border-glow hover-lift bg-elevated/30 p-2">
+            <img class="rounded-lg w-full" src="assets/images/toc/toc_pg_2.png" alt="Table of Contents Page 2">
+          </div>
+        </a>
+        <a href="assets/images/toc/toc_pg_3.png" target="_new" class="group">
+          <div class="rounded-xl overflow-hidden gold-border-glow hover-lift bg-elevated/30 p-2">
+            <img class="rounded-lg w-full" src="assets/images/toc/toc_pg_3.png" alt="Table of Contents Page 3">
+          </div>
+        </a>
+        <a href="assets/images/toc/toc_pg_4.png" target="_new" class="group">
+          <div class="rounded-xl overflow-hidden gold-border-glow hover-lift bg-elevated/30 p-2">
+            <img class="rounded-lg w-full" src="assets/images/toc/toc_pg_4.png" alt="Table of Contents Page 4">
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-midnight border-t border-gold-dim">
+    <div class="container mx-auto px-6 pt-16 pb-10">
+      <div class="flex flex-wrap gap-8">
         <div class="w-full md:w-1/4 text-center md:text-left">
-          <h5 class="uppercase mb-6 font-bold">Links</h5>
-          <ul class="mb-4">
-            <li class="mt-2">
-              <a href="{{ page.amazon_url }}" class="hover:underline text-gray-600 hover:text-orange-500" target="_new">Buy The E-Book</a>
+          <h5 class="uppercase mb-6 font-semibold text-sm tracking-widest text-gold">Links</h5>
+          <ul class="mb-4 space-y-3">
+            <li>
+              <a href="{{ page.amazon_url }}" class="text-warm-gray hover:text-gold transition-colors duration-300" target="_new">Buy The E-Book</a>
             </li>
-	          <li class="mt-2">
-              <a href="{{ page.amazon_paper_url }}" class="hover:underline text-gray-600 hover:text-orange-500" target="_new">Buy The Paperback (US)</a>
+	          <li>
+              <a href="{{ page.amazon_paper_url }}" class="text-warm-gray hover:text-gold transition-colors duration-300" target="_new">Buy The Paperback (US)</a>
             </li>
-	          <li class="mt-2">
-              <a href="{{ page.bookdepository_url }}" class="hover:underline text-gray-600 hover:text-orange-500" target="_new">Buy The Paperback (international)</a>
+	          <li>
+              <a href="{{ page.bookdepository_url }}" class="text-warm-gray hover:text-gold transition-colors duration-300" target="_new">Buy The Paperback (international)</a>
             </li>
-            <li class="mt-2">
-              <a href="{{ site.twitter_account }}" class="hover:underline text-gray-600 hover:text-orange-500" target="_new">Contact Us</a>
+            <li>
+              <a href="{{ site.twitter_account }}" class="text-warm-gray hover:text-gold transition-colors duration-300" target="_new">Contact Us</a>
             </li>
           </ul>
         </div>
         <div class="w-full md:w-1/4 text-center md:text-left">
-          <h5 class="uppercase mb-6 font-bold">Social</h5>
-          <ul class="mb-4">
-            <li class="mt-2">
-              <a href="{{ site.twitter_account }}" class="hover:underline text-gray-600 hover:text-orange-500">Twitter</a>
+          <h5 class="uppercase mb-6 font-semibold text-sm tracking-widest text-gold">Social</h5>
+          <ul class="mb-4 space-y-3">
+            <li>
+              <a href="{{ site.twitter_account }}" class="text-warm-gray hover:text-gold transition-colors duration-300">Twitter</a>
             </li>
-            <li class="mt-2">
-              <a href="https://discord.gg/HeUp2N2RxC" class="hover:underline text-gray-600 hover:text-orange-500">Discord</a>
+            <li>
+              <a href="https://discord.gg/HeUp2N2RxC" class="text-warm-gray hover:text-gold transition-colors duration-300">Discord</a>
             </li>
           </ul>
         </div>
         <div class="w-full md:w-1/4 text-center md:text-left">
-          <h5 class="uppercase mb-6 font-bold">Meet The Authors</h5>
-          <ul class="mb-4">
-            <li class="mt-2">
-              <a href="https://yechiel.me" target="_new" class="hover:underline text-gray-600 hover:text-orange-500">Yechiel Kalmenson</a>
+          <h5 class="uppercase mb-6 font-semibold text-sm tracking-widest text-gold">Meet The Authors</h5>
+          <ul class="mb-4 space-y-3">
+            <li>
+              <a href="https://yechiel.me" target="_new" class="text-warm-gray hover:text-gold transition-colors duration-300">Yechiel Kalmenson</a>
             </li>
-            <li class="mt-2">
-              <a href="https://www.bengreenberg.dev" target="_new"class="hover:underline text-gray-600 hover:text-orange-500">Ben Greenberg</a>
+            <li>
+              <a href="https://www.bengreenberg.dev" target="_new" class="text-warm-gray hover:text-gold transition-colors duration-300">Ben Greenberg</a>
             </li>
           </ul>
         </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-gold-dim text-center">
+        <p class="font-serif text-lg text-warm-gray">
+          <span class="text-warm-white">Torah </span><span class="font-mono text-gold">&amp;&amp;</span><span class="text-warm-white"> Tech</span>
+        </p>
       </div>
     </div>
   </footer>
+
+  <!-- Scroll reveal script -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.section-reveal').forEach(el => observer.observe(el));
+  </script>
+
 </body>
 
 </html>

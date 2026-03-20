@@ -11,6 +11,11 @@ html {
   scroll-behavior: smooth;
 }
 
+::selection {
+  background: rgba(201, 168, 76, 0.3);
+  color: #e8e6e1;
+}
+
 /* Write your styles above this line. */
 
 @tailwind utilities;
