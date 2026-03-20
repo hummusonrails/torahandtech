@@ -118,30 +118,6 @@ newsletter_archive_url: https://us19.campaign-archive.com/home/?u=30eae9068398a2
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        'midnight': '#0a0a0f',
-        'deep': '#12121a',
-        'elevated': '#1a1a2e',
-        'gold': '#c9a84c',
-        'gold-light': '#dbb960',
-        'gold-dim': 'rgba(201, 168, 76, 0.15)',
-        'warm-white': '#e8e6e1',
-        'warm-gray': '#9ca3af',
-      },
-      fontFamily: {
-        'serif': ['Cormorant Garamond', 'Georgia', 'serif'],
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
-        'mono': ['JetBrains Mono', 'monospace'],
-      },
-    }
-  }
-}
-</script>
 <link rel="stylesheet" href="css/site.css" />
 <link type="application/atom+xml" rel="alternate" href="https://torahandtech.dev/feed.xml" title="{{ site.title }}" />
 <style>
@@ -207,9 +183,10 @@ tailwind.config = {
       <div class="hidden lg:block">
         <ul class="inline-flex items-center space-x-8">
           <li><a class="nav-link text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="/">Home</a></li>
-          <li><a class="nav-link text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="#about-the-book">About The Book</a></li>
+          <li><a class="nav-link text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="#about-the-book">About</a></li>
+          <li><a class="nav-link text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="/authors/">Authors</a></li>
+          <li><a class="nav-link text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="/faq/">FAQ</a></li>
           <li><a class="nav-link text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="#subscribe-to-the-newsletter">Subscribe</a></li>
-          <li><a class="nav-link text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="{{page.newsletter_archive_url}}" target="_blank">Archive</a></li>
           <li><a class="nav-link text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="https://discord.gg/HeUp2N2RxC" target="_blank">Discord</a></li>
         </ul>
       </div>
@@ -218,9 +195,10 @@ tailwind.config = {
     <div id="mobile-menu" class="hidden lg:hidden border-t border-gold-dim">
       <ul class="px-6 py-4 space-y-4">
         <li><a class="block text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="/">Home</a></li>
-        <li><a class="block text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="#about-the-book">About The Book</a></li>
+        <li><a class="block text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="#about-the-book">About</a></li>
+        <li><a class="block text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="/authors/">Authors</a></li>
+        <li><a class="block text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="/faq/">FAQ</a></li>
         <li><a class="block text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="#subscribe-to-the-newsletter">Subscribe</a></li>
-        <li><a class="block text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="{{page.newsletter_archive_url}}" target="_blank">Archive</a></li>
         <li><a class="block text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="https://discord.gg/HeUp2N2RxC" target="_blank">Discord</a></li>
       </ul>
     </div>

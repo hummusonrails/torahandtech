@@ -1,0 +1,281 @@
+---
+layout: null
+permalink: /faq/
+---
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ - {{ site.title }}</title>
+<meta name="description" content="Frequently asked questions about Torah && Tech, a book exploring the intersection of Torah and technology." />
+<meta name="author" content="Ben Greenberg, Yechiel Kalmenson" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0a0a0f" />
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="FAQ - {{ site.title }}" />
+<meta property="og:description" content="Frequently asked questions about Torah && Tech." />
+<meta property="og:url" content="{{ site.url }}faq/" />
+<meta property="og:site_name" content="{{ site.title }}" />
+<meta property="og:image" content="https://torahandtech.dev/assets/images/og-image.jpg" />
+<link rel="canonical" href="{{ site.url }}faq/" />
+<!-- Structured Data: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Torah && Tech about?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Torah && Tech brings more than three millennia of Jewish insights and wisdom to bear on technology topics including artificial intelligence, code ownership, object-oriented design, social media ethics, and more. It explores what Jewish ethics and wisdom have to say about modern technology, and what innovations in technology mean for our interpersonal lives."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who wrote Torah && Tech?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Torah && Tech was written by Ben Greenberg, a software developer and rabbi, and Yechiel Kalmenson, a software developer and author. The book grew out of a weekly newsletter that has been running for more than a year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I buy the book?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Torah && Tech is available on Amazon in both paperback and e-book formats. You can purchase it at https://www.amazon.com/dp/1735021709 for paperback or https://www.amazon.com/dp/B088NNRZ85 for the Kindle edition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there an e-book version?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Torah && Tech is available as a Kindle e-book on Amazon at https://www.amazon.com/dp/B088NNRZ85."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I order internationally?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. For international paperback orders, you can purchase Torah && Tech through Book Depository, which offers worldwide shipping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I place a bulk order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For bulk orders, please email the authors directly at orders@torahandtech.dev."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a newsletter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! The Torah && Tech weekly newsletter is the ongoing conversation that inspired the book. You can subscribe on the homepage or browse the newsletter archive to see past issues."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I join the community?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can join the Torah && Tech community on Discord at https://discord.gg/HeUp2N2RxC and follow along on Twitter @tech_torah."
+      }
+    }
+  ]
+}
+</script>
+<!-- End SEO -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css" />
+<style>
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
+  .animate-fade-in-up-delay-1 { animation: fadeInUp 0.8s ease-out 0.15s forwards; opacity: 0; }
+  .section-reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .section-reveal.visible { opacity: 1; transform: translateY(0); }
+  .nav-link { position: relative; }
+  .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1px; background: #c9a84c; transition: width 0.3s ease; }
+  .nav-link:hover::after { width: 100%; }
+  .gold-border-glow { border: 1px solid rgba(201, 168, 76, 0.2); transition: border-color 0.3s ease; }
+  .gold-border-glow:hover { border-color: rgba(201, 168, 76, 0.5); }
+</style>
+</head>
+<body class="bg-midnight text-warm-white font-sans antialiased">
+  <a href="#faq-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:bg-gold focus:text-midnight focus:px-4 focus:py-2 focus:rounded">Skip to content</a>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-midnight/80 backdrop-blur-md border-b border-gold-dim">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a class="font-serif text-2xl lg:text-3xl font-bold tracking-wide" href="/">
+        <span class="text-warm-white">Torah </span><span class="font-mono text-gold">&amp;&amp;</span><span class="text-warm-white"> Tech</span>
+      </a>
+      <div class="block lg:hidden">
+        <button aria-label="Toggle navigation menu" aria-expanded="false" onclick="var m=document.getElementById('mobile-menu');m.classList.toggle('hidden');this.setAttribute('aria-expanded',!m.classList.contains('hidden'))" class="flex items-center px-3 py-2 border rounded text-warm-gray border-gold-dim hover:text-gold hover:border-gold appearance-none focus:outline-none transition-colors duration-300">
+          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:block">
+        <ul class="inline-flex items-center space-x-8">
+          <li><a class="nav-link text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="/">Home</a></li>
+          <li><a class="nav-link text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="/#about-the-book">About The Book</a></li>
+          <li><a class="nav-link text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="/#subscribe-to-the-newsletter">Subscribe</a></li>
+          <li><a class="nav-link text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="https://discord.gg/HeUp2N2RxC" target="_blank">Discord</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-gold-dim">
+      <ul class="px-6 py-4 space-y-4">
+        <li><a class="block text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="/">Home</a></li>
+        <li><a class="block text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="/#about-the-book">About The Book</a></li>
+        <li><a class="block text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="/#subscribe-to-the-newsletter">Subscribe</a></li>
+        <li><a class="block text-sm font-medium uppercase tracking-widest text-warm-gray hover:text-gold transition-colors duration-300" href="https://discord.gg/HeUp2N2RxC" target="_blank">Discord</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- FAQ Content -->
+  <section id="faq-content" class="pt-32 pb-24 bg-deep min-h-screen">
+    <div class="container mx-auto px-6">
+      <h1 class="font-serif text-4xl md:text-5xl font-bold text-center text-warm-white mb-4 animate-fade-in-up">
+        Frequently Asked Questions
+      </h1>
+      <p class="text-center text-warm-gray text-lg mb-16 animate-fade-in-up-delay-1">Everything you need to know about Torah <span class="font-mono text-gold">&amp;&amp;</span> Tech</p>
+
+      <div class="max-w-3xl mx-auto space-y-6">
+
+        <!-- Q1 -->
+        <div class="section-reveal p-6 rounded-2xl gold-border-glow bg-elevated/50">
+          <h2 class="font-serif text-2xl text-gold font-bold mb-3">What is Torah &amp;&amp; Tech about?</h2>
+          <p class="text-warm-gray leading-relaxed">Torah &amp;&amp; Tech brings more than three millennia of Jewish insights and wisdom to bear on technology topics including artificial intelligence, code ownership, object-oriented design, social media ethics, and more. It explores what Jewish ethics and wisdom have to say about modern technology, and what innovations in technology mean for our interpersonal lives at work, with our families, and with our communities.</p>
+        </div>
+
+        <!-- Q2 -->
+        <div class="section-reveal p-6 rounded-2xl gold-border-glow bg-elevated/50">
+          <h2 class="font-serif text-2xl text-gold font-bold mb-3">Who wrote Torah &amp;&amp; Tech?</h2>
+          <p class="text-warm-gray leading-relaxed">Torah &amp;&amp; Tech was written by <a href="https://www.bengreenberg.dev" class="text-gold hover:text-gold-light border-b border-gold/30 hover:border-gold transition-colors duration-300" target="_blank">Ben Greenberg</a>, a software developer and rabbi, and <a href="https://yechiel.me" class="text-gold hover:text-gold-light border-b border-gold/30 hover:border-gold transition-colors duration-300" target="_blank">Yechiel Kalmenson</a>, a software developer and author. The book grew out of a weekly newsletter that has been running for more than a year.</p>
+        </div>
+
+        <!-- Q3 -->
+        <div class="section-reveal p-6 rounded-2xl gold-border-glow bg-elevated/50">
+          <h2 class="font-serif text-2xl text-gold font-bold mb-3">Where can I buy the book?</h2>
+          <p class="text-warm-gray leading-relaxed">Torah &amp;&amp; Tech is available on Amazon in both <a href="https://www.amazon.com/dp/1735021709" class="text-gold hover:text-gold-light border-b border-gold/30 hover:border-gold transition-colors duration-300" target="_blank">paperback</a> and <a href="https://www.amazon.com/dp/B088NNRZ85" class="text-gold hover:text-gold-light border-b border-gold/30 hover:border-gold transition-colors duration-300" target="_blank">Kindle e-book</a> formats.</p>
+        </div>
+
+        <!-- Q4 -->
+        <div class="section-reveal p-6 rounded-2xl gold-border-glow bg-elevated/50">
+          <h2 class="font-serif text-2xl text-gold font-bold mb-3">Is there an e-book version?</h2>
+          <p class="text-warm-gray leading-relaxed">Yes! Torah &amp;&amp; Tech is available as a <a href="https://www.amazon.com/dp/B088NNRZ85" class="text-gold hover:text-gold-light border-b border-gold/30 hover:border-gold transition-colors duration-300" target="_blank">Kindle e-book on Amazon</a>.</p>
+        </div>
+
+        <!-- Q5 -->
+        <div class="section-reveal p-6 rounded-2xl gold-border-glow bg-elevated/50">
+          <h2 class="font-serif text-2xl text-gold font-bold mb-3">Can I order internationally?</h2>
+          <p class="text-warm-gray leading-relaxed">Yes. For international paperback orders, you can purchase Torah &amp;&amp; Tech through <a href="https://www.bookdepository.com/Torah--Tech-Discussions-at-the-Intersection-of-Torah-and-Technology-Yechiel-Kalmenson-Ben-Greenberg/9781735021706" class="text-gold hover:text-gold-light border-b border-gold/30 hover:border-gold transition-colors duration-300" target="_blank">Book Depository</a>, which offers worldwide shipping. The Kindle e-book is also available internationally on Amazon.</p>
+        </div>
+
+        <!-- Q6 -->
+        <div class="section-reveal p-6 rounded-2xl gold-border-glow bg-elevated/50">
+          <h2 class="font-serif text-2xl text-gold font-bold mb-3">How do I place a bulk order?</h2>
+          <p class="text-warm-gray leading-relaxed">For bulk orders, please email the authors directly at <a href="mailto:{{ site.email }}" class="text-gold hover:text-gold-light border-b border-gold/30 hover:border-gold transition-colors duration-300">{{ site.email }}</a>.</p>
+        </div>
+
+        <!-- Q7 -->
+        <div class="section-reveal p-6 rounded-2xl gold-border-glow bg-elevated/50">
+          <h2 class="font-serif text-2xl text-gold font-bold mb-3">Is there a newsletter?</h2>
+          <p class="text-warm-gray leading-relaxed">Yes! The Torah &amp;&amp; Tech weekly newsletter is the ongoing conversation that inspired the book. You can <a href="/#subscribe-to-the-newsletter" class="text-gold hover:text-gold-light border-b border-gold/30 hover:border-gold transition-colors duration-300">subscribe on the homepage</a> to receive it each week.</p>
+        </div>
+
+        <!-- Q8 -->
+        <div class="section-reveal p-6 rounded-2xl gold-border-glow bg-elevated/50">
+          <h2 class="font-serif text-2xl text-gold font-bold mb-3">How can I join the community?</h2>
+          <p class="text-warm-gray leading-relaxed">Join the Torah &amp;&amp; Tech community on <a href="https://discord.gg/HeUp2N2RxC" class="text-gold hover:text-gold-light border-b border-gold/30 hover:border-gold transition-colors duration-300" target="_blank">Discord</a> and follow along on <a href="{{ site.twitter_account }}" class="text-gold hover:text-gold-light border-b border-gold/30 hover:border-gold transition-colors duration-300" target="_blank">Twitter</a>.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-midnight border-t border-gold-dim">
+    <div class="container mx-auto px-6 pt-16 pb-10">
+      <div class="flex flex-wrap gap-8">
+        <div class="w-full md:w-1/4 text-center md:text-left">
+          <h5 class="uppercase mb-6 font-semibold text-sm tracking-widest text-gold">Links</h5>
+          <ul class="mb-4 space-y-3">
+            <li>
+              <a href="https://www.amazon.com/dp/B088NNRZ85" class="text-warm-gray hover:text-gold transition-colors duration-300" target="_blank">Buy The E-Book</a>
+            </li>
+            <li>
+              <a href="https://www.amazon.com/dp/1735021709" class="text-warm-gray hover:text-gold transition-colors duration-300" target="_blank">Buy The Paperback (US)</a>
+            </li>
+            <li>
+              <a href="https://www.bookdepository.com/Torah--Tech-Discussions-at-the-Intersection-of-Torah-and-Technology-Yechiel-Kalmenson-Ben-Greenberg/9781735021706" class="text-warm-gray hover:text-gold transition-colors duration-300" target="_blank">Buy The Paperback (international)</a>
+            </li>
+            <li>
+              <a href="{{ site.twitter_account }}" class="text-warm-gray hover:text-gold transition-colors duration-300" target="_blank">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/4 text-center md:text-left">
+          <h5 class="uppercase mb-6 font-semibold text-sm tracking-widest text-gold">Social</h5>
+          <ul class="mb-4 space-y-3">
+            <li>
+              <a href="{{ site.twitter_account }}" class="text-warm-gray hover:text-gold transition-colors duration-300">Twitter</a>
+            </li>
+            <li>
+              <a href="https://discord.gg/HeUp2N2RxC" class="text-warm-gray hover:text-gold transition-colors duration-300">Discord</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/4 text-center md:text-left">
+          <h5 class="uppercase mb-6 font-semibold text-sm tracking-widest text-gold">Meet The Authors</h5>
+          <ul class="mb-4 space-y-3">
+            <li>
+              <a href="https://yechiel.me" target="_blank" class="text-warm-gray hover:text-gold transition-colors duration-300">Yechiel Kalmenson</a>
+            </li>
+            <li>
+              <a href="https://www.bengreenberg.dev" target="_blank" class="text-warm-gray hover:text-gold transition-colors duration-300">Ben Greenberg</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-gold-dim text-center">
+        <p class="font-serif text-lg text-warm-gray">
+          <span class="text-warm-white">Torah </span><span class="font-mono text-gold">&amp;&amp;</span><span class="text-warm-white"> Tech</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll reveal script -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.section-reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

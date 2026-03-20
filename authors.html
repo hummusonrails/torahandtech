@@ -1,17 +1,49 @@
 ---
 layout: null
-permalink: /404.html
+permalink: /authors/
 ---
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>404 - Page Not Found - {{ site.title }}</title>
-<meta name="description" content="Page not found." />
-<meta name="robots" content="noindex, nofollow" />
+<title>Authors - {{ site.title }}</title>
+<meta name="description" content="Meet the authors of Torah && Tech: Ben Greenberg and Yechiel Kalmenson." />
+<meta name="author" content="Ben Greenberg, Yechiel Kalmenson" />
+<meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#0a0a0f" />
 <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Authors - {{ site.title }}" />
+<meta property="og:description" content="Meet the authors of Torah && Tech: Ben Greenberg and Yechiel Kalmenson." />
+<meta property="og:url" content="{{ site.url }}authors/" />
+<meta property="og:site_name" content="{{ site.title }}" />
+<meta property="og:image" content="https://torahandtech.dev/assets/images/og-image.jpg" />
+<link rel="canonical" href="{{ site.url }}authors/" />
+<!-- Structured Data: Person -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ben Greenberg",
+    "url": "https://www.bengreenberg.dev",
+    "jobTitle": "Software Developer",
+    "description": "Ben Greenberg is a software developer and rabbi, and co-author of Torah && Tech: Discussions at the Intersection of Torah and Technology.",
+    "sameAs": ["https://www.bengreenberg.dev"]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yechiel Kalmenson",
+    "url": "https://yechiel.me",
+    "jobTitle": "Software Developer",
+    "description": "Yechiel Kalmenson is a software developer and author, and co-author of Torah && Tech: Discussions at the Intersection of Torah and Technology.",
+    "sameAs": ["https://yechiel.me"]
+  }
+]
+</script>
+<!-- End SEO -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -24,25 +56,19 @@ permalink: /404.html
   .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
   .animate-fade-in-up-delay-1 { animation: fadeInUp 0.8s ease-out 0.15s forwards; opacity: 0; }
   .animate-fade-in-up-delay-2 { animation: fadeInUp 0.8s ease-out 0.3s forwards; opacity: 0; }
+  .section-reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .section-reveal.visible { opacity: 1; transform: translateY(0); }
+  .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(201, 168, 76, 0.15); }
+  .gold-border-glow { border: 1px solid rgba(201, 168, 76, 0.2); transition: border-color 0.3s ease; }
+  .gold-border-glow:hover { border-color: rgba(201, 168, 76, 0.5); }
   .nav-link { position: relative; }
   .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1px; background: #c9a84c; transition: width 0.3s ease; }
   .nav-link:hover::after { width: 100%; }
-  @keyframes shimmer {
-    0% { background-position: -200% center; }
-    100% { background-position: 200% center; }
-  }
-  .gold-shimmer {
-    background: linear-gradient(90deg, #c9a84c 0%, #f0d78c 50%, #c9a84c 100%);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: shimmer 3s linear infinite;
-  }
 </style>
 </head>
 <body class="bg-midnight text-warm-white font-sans antialiased">
-  <a href="#error-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:bg-gold focus:text-midnight focus:px-4 focus:py-2 focus:rounded">Skip to content</a>
+  <a href="#authors-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:bg-gold focus:text-midnight focus:px-4 focus:py-2 focus:rounded">Skip to content</a>
 
   <!-- Navigation -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-midnight/80 backdrop-blur-md border-b border-gold-dim">
@@ -78,24 +104,41 @@ permalink: /404.html
     </div>
   </nav>
 
-  <!-- 404 Content -->
-  <div id="error-content" class="min-h-screen flex items-center justify-center" style="background: radial-gradient(ellipse at 50% 50%, #1a1a2e 0%, #0a0a0f 70%)">
-    <div class="text-center px-6">
-      <p class="font-serif text-2xl text-warm-gray mb-6 animate-fade-in-up">
-        <span class="text-warm-white">Torah </span><span class="gold-shimmer font-mono">&amp;&amp;</span><span class="text-warm-white"> Tech</span>
-      </p>
-      <h1 class="font-mono text-8xl md:text-9xl font-bold text-gold mb-4 animate-fade-in-up" style="text-shadow: 0 0 60px rgba(201, 168, 76, 0.3);">404</h1>
-      <p class="font-serif text-3xl md:text-4xl text-warm-white mb-4 animate-fade-in-up-delay-1">Page Not Found</p>
-      <p class="text-warm-gray text-lg mb-10 animate-fade-in-up-delay-1">The page you are looking for does not exist or has been moved.</p>
-      <div class="animate-fade-in-up-delay-2">
-        <a href="/">
-          <button class="bg-gold hover:bg-gold-light text-midnight font-semibold rounded-full py-4 px-10 uppercase tracking-widest text-sm transition-all duration-300 hover:shadow-lg hover:shadow-gold/20">
-            Back to Home
-          </button>
-        </a>
+  <!-- Authors Content -->
+  <section id="authors-content" class="pt-32 pb-24 bg-deep min-h-screen">
+    <div class="container mx-auto px-6">
+      <h1 class="font-serif text-4xl md:text-5xl font-bold text-center text-warm-white mb-4 animate-fade-in-up">
+        Meet The Authors
+      </h1>
+      <p class="text-center text-warm-gray text-lg mb-16 animate-fade-in-up-delay-1">The people behind Torah <span class="font-mono text-gold">&amp;&amp;</span> Tech</p>
+
+      <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+
+        <!-- Ben Greenberg -->
+        <div class="section-reveal p-8 rounded-2xl gold-border-glow bg-elevated/50 hover-lift text-center">
+          <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center">
+            <span class="font-serif text-3xl text-gold font-bold">BG</span>
+          </div>
+          <h2 class="font-serif text-3xl text-gold font-bold mb-2">Ben Greenberg</h2>
+          <p class="text-warm-gray text-sm uppercase tracking-widest mb-6">Software Developer &amp; Rabbi</p>
+          <p class="text-warm-gray leading-relaxed mb-6">Ben Greenberg is a software developer and rabbi who brings a unique perspective to the intersection of ancient wisdom and modern technology. As co-author of Torah &amp;&amp; Tech, he explores how millennia of Jewish thought can inform and enrich our relationship with technology.</p>
+          <a href="https://www.bengreenberg.dev" target="_blank" class="inline-block bg-gold hover:bg-gold-light text-midnight font-semibold rounded-full py-3 px-8 uppercase tracking-widest text-xs transition-all duration-300 hover:shadow-lg hover:shadow-gold/20">Visit Website</a>
+        </div>
+
+        <!-- Yechiel Kalmenson -->
+        <div class="section-reveal p-8 rounded-2xl gold-border-glow bg-elevated/50 hover-lift text-center">
+          <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center">
+            <span class="font-serif text-3xl text-gold font-bold">YK</span>
+          </div>
+          <h2 class="font-serif text-3xl text-gold font-bold mb-2">Yechiel Kalmenson</h2>
+          <p class="text-warm-gray text-sm uppercase tracking-widest mb-6">Software Developer &amp; Author</p>
+          <p class="text-warm-gray leading-relaxed mb-6">Yechiel Kalmenson is a software developer and author who co-created the Torah &amp;&amp; Tech newsletter and book. He brings together his passion for coding and Jewish learning to spark meaningful conversations about how we engage with the digital world.</p>
+          <a href="https://yechiel.me" target="_blank" class="inline-block bg-gold hover:bg-gold-light text-midnight font-semibold rounded-full py-3 px-8 uppercase tracking-widest text-xs transition-all duration-300 hover:shadow-lg hover:shadow-gold/20">Visit Website</a>
+        </div>
+
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Footer -->
   <footer class="bg-midnight border-t border-gold-dim">
@@ -148,6 +191,18 @@ permalink: /404.html
       </div>
     </div>
   </footer>
+
+  <!-- Scroll reveal script -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.section-reveal').forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
