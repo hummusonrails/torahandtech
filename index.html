@@ -12,25 +12,108 @@ newsletter_archive_url: https://us19.campaign-archive.com/home/?u=30eae9068398a2
 <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>{{ site.title }}</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<link rel="canonical" href= "{{ site.url }}"/>
+<link rel="canonical" href="{{ site.url }}"/>
 <meta name="description" content="{{ site.description }}" />
-<meta property="og:type" content="summary" />
+<meta name="author" content="Ben Greenberg, Yechiel Kalmenson" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0a0a0f" />
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+<!-- Open Graph -->
+<meta property="og:type" content="book" />
 <meta property="og:title" content="{{ site.title }}" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:description" content="{{ site.description }}" />
 <meta property="og:url" content="{{ site.url }}" />
 <meta property="og:site_name" content="{{ site.title }}" />
-<meta property="og:image" content="https://torahandtech.dev/assets/images/book_3d.png" />
-<meta property="og:image:alt" content="Front and back view of the Torah and Tech book" />
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:site" content="@tech_torah" />
-<meta property="twitter:title" content="{{ site.title }}" />
-<meta property="twitter:description" content="{{ site.description }}" />
-<meta property="twitter:image" content="https://torahandtech.dev/assets/images/book_3d.png" />
-<meta property="twitter:image:alt" content="Front and back view of the Torah and Tech book. " />
+<meta property="og:image" content="https://torahandtech.dev/assets/images/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Torah && Tech - Discussions at the Intersection of Torah and Technology" />
+<meta property="book:author" content="https://www.bengreenberg.dev" />
+<meta property="book:author" content="https://yechiel.me" />
+<meta property="book:isbn" content="978-1735021706" />
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@tech_torah" />
+<meta name="twitter:title" content="{{ site.title }}" />
+<meta name="twitter:description" content="{{ site.description }}" />
+<meta name="twitter:image" content="https://torahandtech.dev/assets/images/og-image.jpg" />
+<meta name="twitter:image:alt" content="Torah && Tech - Discussions at the Intersection of Torah and Technology" />
+<!-- Structured Data -->
 <script type="application/ld+json">
-{"url":"{{ site.url }}","headline":"{{ site.title }}","name":"{{ site.title }}","description":"{{ site.description }}","@type":"WebSite","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "{{ site.url }}",
+    "name": "{{ site.title }}",
+    "description": "{{ site.description }}"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "@id": "https://torahandtech.dev/#book",
+    "name": "Torah && Tech: Discussions at the Intersection of Torah and Technology",
+    "alternateName": "Torah and Tech",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Ben Greenberg",
+        "url": "https://www.bengreenberg.dev"
+      },
+      {
+        "@type": "Person",
+        "name": "Yechiel Kalmenson",
+        "url": "https://yechiel.me"
+      }
+    ],
+    "isbn": "978-1735021706",
+    "bookFormat": "https://schema.org/Paperback",
+    "inLanguage": "en",
+    "image": "https://torahandtech.dev/assets/images/og-image.jpg",
+    "description": "Torah && Tech brings more than three millennia of Jewish insights and wisdom to bear on technology topics including artificial intelligence, code ownership, object-oriented design, social media ethics, and more.",
+    "genre": ["Religion & Technology", "Jewish Ethics", "Technology Ethics"],
+    "about": [
+      {"@type": "Thing", "name": "Torah"},
+      {"@type": "Thing", "name": "Technology Ethics"},
+      {"@type": "Thing", "name": "Jewish Ethics"},
+      {"@type": "Thing", "name": "Artificial Intelligence"}
+    ],
+    "workExample": [
+      {
+        "@type": "Book",
+        "isbn": "978-1735021706",
+        "bookFormat": "https://schema.org/Paperback",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.amazon.com/dp/1735021709",
+          "priceCurrency": "USD",
+          "seller": {
+            "@type": "Organization",
+            "name": "Amazon"
+          }
+        }
+      },
+      {
+        "@type": "Book",
+        "bookFormat": "https://schema.org/EBook",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.amazon.com/dp/B088NNRZ85",
+          "priceCurrency": "USD",
+          "seller": {
+            "@type": "Organization",
+            "name": "Amazon"
+          }
+        }
+      }
+    ]
+  }
+]
+</script>
+<!-- End SEO -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -105,6 +188,7 @@ tailwind.config = {
 </style>
 </head>
 <body class="bg-midnight text-warm-white font-sans antialiased">
+  <a href="#about-the-book" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:bg-gold focus:text-midnight focus:px-4 focus:py-2 focus:rounded">Skip to content</a>
 
   <!-- Navigation -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-midnight/80 backdrop-blur-md border-b border-gold-dim">
@@ -113,7 +197,7 @@ tailwind.config = {
         <span class="text-warm-white">Torah </span><span class="font-mono text-gold">&amp;&amp;</span><span class="text-warm-white"> Tech</span>
       </a>
       <div class="block lg:hidden">
-        <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="flex items-center px-3 py-2 border rounded text-warm-gray border-gold-dim hover:text-gold hover:border-gold appearance-none focus:outline-none transition-colors duration-300">
+        <button aria-label="Toggle navigation menu" aria-expanded="false" onclick="var m=document.getElementById('mobile-menu');m.classList.toggle('hidden');this.setAttribute('aria-expanded',!m.classList.contains('hidden'))" class="flex items-center px-3 py-2 border rounded text-warm-gray border-gold-dim hover:text-gold hover:border-gold appearance-none focus:outline-none transition-colors duration-300">
           <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <title>Menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -180,7 +264,7 @@ tailwind.config = {
         </div>
         <div class="w-full md:w-1/2 flex justify-center">
           <div class="animate-float">
-            <img src="assets/images/book_3d.png" alt="Book 3D Image" class="max-w-sm w-full drop-shadow-2xl animate-glow rounded-lg" style="filter: drop-shadow(0 20px 40px rgba(201, 168, 76, 0.2));" />
+            <img src="assets/images/book_3d_optimized.jpg" alt="Front and back cover of Torah and Tech, a book about the intersection of Jewish wisdom and modern technology" width="534" height="356" fetchpriority="high" class="max-w-sm w-full drop-shadow-2xl animate-glow rounded-lg" style="filter: drop-shadow(0 20px 40px rgba(201, 168, 76, 0.2));" />
           </div>
         </div>
       </div>
@@ -204,7 +288,7 @@ tailwind.config = {
           </div>
         </div>
         <div class="w-full md:w-1/2 flex justify-center">
-          <img src="assets/images/book_3d.png" alt="Book 3D Image" class="max-w-md w-full rounded-lg" style="filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));" />
+          <img src="assets/images/book_3d_optimized.jpg" alt="Torah and Tech book showcasing discussions on Jewish ethics applied to artificial intelligence, code ownership, and object-oriented design" width="534" height="356" loading="lazy" class="max-w-md w-full rounded-lg" style="filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));" />
         </div>
       </div>
 
@@ -217,7 +301,7 @@ tailwind.config = {
           </div>
         </div>
         <div class="w-full md:w-1/2 flex justify-center">
-          <img class="rounded-lg max-w-md w-full" src="assets/images/torah_image.jpg" alt="Torah" style="filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));" />
+          <img class="rounded-lg max-w-md w-full" src="assets/images/torah_image_optimized.jpg" alt="An open Torah scroll representing three millennia of Jewish wisdom and ethical teachings" width="600" height="400" loading="lazy" style="filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));" />
         </div>
       </div>
 
@@ -230,7 +314,7 @@ tailwind.config = {
           </div>
         </div>
         <div class="w-full md:w-1/2 flex justify-center">
-          <img src="assets/images/code.jpg" alt="Code" class="rounded-lg max-w-md w-full" style="filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));" />
+          <img src="assets/images/code_optimized.jpg" alt="Lines of code on a screen representing the technology side of the Torah and Tech conversation" width="600" height="400" loading="lazy" class="rounded-lg max-w-md w-full" style="filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));" />
         </div>
       </div>
     </div>
@@ -253,6 +337,7 @@ tailwind.config = {
         </h3>
         <form class="mt-10 max-w-lg mx-auto" action="https://twitter.us19.list-manage.com/subscribe/post?u=30eae9068398a251f4e180849&amp;id=98ea64e095" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
           <div class="flex items-center border-b border-gold/30 py-2 transition-colors duration-300 focus-within:border-gold">
+            <label for="mce-EMAIL" class="sr-only">Email address</label>
             <input name="EMAIL" id="mce-EMAIL" class="appearance-none bg-transparent border-none w-full text-warm-white mr-3 py-2 px-2 leading-tight focus:outline-none text-lg" type="email" placeholder="example@sample.com" required>
             <input type="submit" value="Subscribe" id="mc-embedded-subscribe" class="bg-gold hover:bg-gold-light text-midnight font-semibold py-2 px-6 border-none rounded-full cursor-pointer transition-all duration-300 hover:shadow-lg hover:shadow-gold/20 text-sm uppercase tracking-wider">
           </div>
@@ -271,22 +356,22 @@ tailwind.config = {
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
         <a href="assets/images/toc/toc_pg_1.png" target="_new" class="group">
           <div class="rounded-xl overflow-hidden gold-border-glow hover-lift bg-elevated/30 p-2">
-            <img class="rounded-lg w-full" src="assets/images/toc/toc_pg_1.png" alt="Table of Contents Page 1">
+            <img class="rounded-lg w-full" src="assets/images/toc/toc_pg_1_optimized.jpg" alt="Table of Contents Page 1 - Torah and Tech chapter listings" width="500" height="750" loading="lazy">
           </div>
         </a>
         <a href="assets/images/toc/toc_pg_2.png" target="_new" class="group">
           <div class="rounded-xl overflow-hidden gold-border-glow hover-lift bg-elevated/30 p-2">
-            <img class="rounded-lg w-full" src="assets/images/toc/toc_pg_2.png" alt="Table of Contents Page 2">
+            <img class="rounded-lg w-full" src="assets/images/toc/toc_pg_2_optimized.jpg" alt="Table of Contents Page 2 - Torah and Tech chapter listings" width="500" height="750" loading="lazy">
           </div>
         </a>
         <a href="assets/images/toc/toc_pg_3.png" target="_new" class="group">
           <div class="rounded-xl overflow-hidden gold-border-glow hover-lift bg-elevated/30 p-2">
-            <img class="rounded-lg w-full" src="assets/images/toc/toc_pg_3.png" alt="Table of Contents Page 3">
+            <img class="rounded-lg w-full" src="assets/images/toc/toc_pg_3_optimized.jpg" alt="Table of Contents Page 3 - Torah and Tech chapter listings" width="500" height="750" loading="lazy">
           </div>
         </a>
         <a href="assets/images/toc/toc_pg_4.png" target="_new" class="group">
           <div class="rounded-xl overflow-hidden gold-border-glow hover-lift bg-elevated/30 p-2">
-            <img class="rounded-lg w-full" src="assets/images/toc/toc_pg_4.png" alt="Table of Contents Page 4">
+            <img class="rounded-lg w-full" src="assets/images/toc/toc_pg_4_optimized.jpg" alt="Table of Contents Page 4 - Torah and Tech chapter listings" width="500" height="750" loading="lazy">
           </div>
         </a>
       </div>

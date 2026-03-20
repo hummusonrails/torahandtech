@@ -31,8 +31,13 @@ twitter_account: https://twitter.com/tech_torah
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
   - jekyll-postcss
   - jekyll-purgecss
+
+include:
+  - robots.txt
+  - llms.txt
 
 # Exclude from processing.
 # The following items will not be processed, by default.

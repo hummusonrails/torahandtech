@@ -1,0 +1,34 @@
+# Torah && Tech
+
+> Torah && Tech is a book exploring the intersection of Jewish ethics, Torah wisdom, and modern technology. Written by Ben Greenberg and Yechiel Kalmenson. ISBN: 978-1735021706.
+
+Torah && Tech brings more than three millennia of Jewish insights and wisdom to bear on technology topics including artificial intelligence, code ownership, object-oriented design, social media ethics, and more. The book grew out of a weekly newsletter and is designed as a conversation starter, not a monologue.
+
+## Key Topics
+
+- Jewish ethics applied to artificial intelligence
+- Torah perspectives on code ownership and intellectual property
+- Object-oriented design through the lens of Torah wisdom
+- Social media's impact on interpersonal relationships and community
+- The intersection of ancient wisdom and modern innovation
+
+## Authors
+
+- [Ben Greenberg](https://www.bengreenberg.dev): Software developer and rabbi
+- [Yechiel Kalmenson](https://yechiel.me): Software developer and author
+
+## Buy the Book
+
+- [Amazon Kindle](https://www.amazon.com/dp/B088NNRZ85): E-book edition
+- [Amazon Paperback](https://www.amazon.com/dp/1735021709): US paperback
+- [Book Depository](https://www.bookdepository.com/Torah--Tech-Discussions-at-the-Intersection-of-Torah-and-Technology-Yechiel-Kalmenson-Ben-Greenberg/9781735021706): International paperback
+
+## Community
+
+- [Newsletter Archive](https://us19.campaign-archive.com/home/?u=30eae9068398a251f4e180849&id=98ea64e095): Weekly Torah && Tech newsletter
+- [Discord](https://discord.gg/HeUp2N2RxC): Community discussion server
+- [Twitter](https://twitter.com/tech_torah): Follow for updates
+
+## Website
+
+- [Homepage](https://torahandtech.dev/): Main site with book details, table of contents, and newsletter signup
