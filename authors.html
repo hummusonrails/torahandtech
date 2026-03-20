@@ -47,7 +47,30 @@ permalink: /authors/
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/site.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'midnight': '#0a0a0f',
+        'deep': '#12121a',
+        'elevated': '#1a1a2e',
+        'gold': '#c9a84c',
+        'gold-light': '#dbb960',
+        'gold-dim': 'rgba(201, 168, 76, 0.15)',
+        'warm-white': '#e8e6e1',
+        'warm-gray': '#9ca3af',
+      },
+      fontFamily: {
+        'serif': ['Cormorant Garamond', 'Georgia', 'serif'],
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'mono': ['JetBrains Mono', 'monospace'],
+      },
+    }
+  }
+}
+</script>
 <style>
   @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }

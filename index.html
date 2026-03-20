@@ -118,7 +118,30 @@ newsletter_archive_url: https://us19.campaign-archive.com/home/?u=30eae9068398a2
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="css/site.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'midnight': '#0a0a0f',
+        'deep': '#12121a',
+        'elevated': '#1a1a2e',
+        'gold': '#c9a84c',
+        'gold-light': '#dbb960',
+        'gold-dim': 'rgba(201, 168, 76, 0.15)',
+        'warm-white': '#e8e6e1',
+        'warm-gray': '#9ca3af',
+      },
+      fontFamily: {
+        'serif': ['Cormorant Garamond', 'Georgia', 'serif'],
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'mono': ['JetBrains Mono', 'monospace'],
+      },
+    }
+  }
+}
+</script>
 <link type="application/atom+xml" rel="alternate" href="https://torahandtech.dev/feed.xml" title="{{ site.title }}" />
 <style>
   @keyframes fadeInUp {
